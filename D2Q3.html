@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var dd = String(today.getDate());
+        var mm = String(today.getMonth() + 1);
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy+", ";
+        today1 = mm + '-' + dd + '-' + yyyy;
+        document.write(today);
+        document.write(today1);
+    </script>
+</body>
+</html>
