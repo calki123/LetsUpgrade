@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Day 4</title>
+    </head>
+    <script>
+        let sales=prompt("Enter the sales sale by employee:");
+        if(sales<=5000 && sales>0){
+            console.log("total commission earned by him is",sales*0.02);
+        }
+        if(sales<=10000 && sales>5001){
+            console.log("total commission earned by him is",sales*0.05);
+        }
+        if(sales<=20000 && sales>10001){
+            console.log("total commission earned by him is",sales*0.07);
+        }
+        if(sales>20000){
+            console.log("total commission earned by him is",sales*0.1);
+        }
+    </script>
+    <body>
+        <div id="demo">Question 5</div>
+    </body>
+</html>
