@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Day 5 Assignment</title>
+    <script>
+        class User{
+            constructor(name,age,email){
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coin=0;
+                this.courses=[];
+            }
+            login(){
+                console.log(`Welcome ${this.name}, logged in succefully.`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} u r logged out successfully.`);
+                return this;
+            }
+        }
+        class Moderator extends User{
+            addCoin(user){
+                this.coin++;
+                console.log(`${this.name} has ${this.coin} coins.`);
+                return this;
+            }
+            removeCoin(user){
+                this.coin--;
+                console.log(`${this.name} has ${this.coin} coins.`);
+                return this;
+            }
+        } 
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+                console.log(user);
+                return this;
+            }
+            deleteCourse(user,course){
+                user.courses=user.courses.filter(item=>item!==course)
+                console.log(user)
+                return this;
+            }
+        }   
+
+        let user1=new User("kalki",21,"calkikhunt123@gmail.com");
+        let mode1=new Moderator("chirag",24,"sada@sdgsdf.com");
+        let admin=new Admin("bhadu",56,"sadas@sdf.com");
+        user1.logout();
+        mode1.addCoin().addCoin().removeCoin();
+        admin.addCourse(user1,"java").addCourse(user1,"python").addCourse(user1,"abc").deleteCourse(user1,"abc").deleteCourse(user1,"java")
+    </script>    
+    </head>
+    <body>
+        <div id="demo">Question 2</div>
+    </body>
+
+</html>
