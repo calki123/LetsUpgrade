@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Day 6</title>
+        
+        <style>
+            body {
+              padding: 25px;
+              background-color: white;
+              color: black;
+              font-size: 25px;
+            }
+            
+            .dark-mode {
+              background-color: black;
+              color: white;
+            }
+            </style>
+        <script>
+            // const darkModeToggle = document.querySelector('dark-mode-toggle');
+            // darkModeToggle.mode = 'dark';
+            function welcome(){
+                var name=prompt("enter the name:","")
+                document.write("Welcome, "+name+" How are u?")
+            }
+            welcome()
+
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+
+
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+        </script>
+    </head>
+    <body onload="startTime()">
+        <div id="demo"></div>
+        <div id="txt"></div>
+        <button onclick="myFunction()">Toggle dark mode</button>
+       
+    </body>
+</html>

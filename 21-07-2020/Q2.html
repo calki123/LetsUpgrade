@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Day 6</title>
+        <script>
+            
+            function printTable(num){
+                var num=Number(document.getElementById('inputnum').value);
+                for (var i=1;i<=10;i++){
+                    var p=document.getElementById('p1');
+                    p.innerHTML+=num +" * "+i+" = "+(num*i)+"<br/>"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="demo">Question 2</div>
+        <p><input type="text" id="inputnum" placeholder="enter number"/></p>
+        <p><input type="button" value="Print Table." onclick='printTable()'/>
+            <p id="p1"></p>
+    </body>
+</html>
